@@ -1,0 +1,12 @@
+[
+  {
+    "id": "panel-1779805447185",
+    "name": "teste4",
+    "ip": "172.17.67.193",
+    "port": 5000,
+    "protocol": "https",
+    "useProxy": true,
+    "type": "stream",
+    "description": ""
+  }
+]
