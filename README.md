@@ -1,10 +1,10 @@
-# 📊 monitorPaineis — Painel de Monitoramento & Agente de Transmissão
+# monitorPaineis — Painel de Monitoramento & Agente de Transmissão
 
 > **Uma solução premium para monitoramento de painéis, dashboards e computadores remotos com bypass de CORS/iFrame inteligente e alertas no Telegram.**
 
 ---
 
-## 🚀 Sobre o Projeto
+## Sobre o Projeto
 
 O **monitorPaineis** é uma plataforma robusta desenvolvida para monitorar e exibir múltiplos painéis de forma centralizada. Ele resolve um dos maiores problemas ao incorporar sites e sistemas em `<iframe>` (bloqueios de **CORS**, **X-Frame-Options** e **CSP**) por meio de um **Smart Proxy** integrado no servidor Node.js. 
 
@@ -12,20 +12,20 @@ Além disso, o projeto inclui um **Agente de Transmissão de Tela em C#** para W
 
 ---
 
-## 🎨 Principais Recursos
+## Principais Recursos
 
-*   🖥️ **Multi-painéis Premium**: Visualização lado a lado de múltiplos painéis em grade responsiva, com suporte a modo tela cheia individual.
-*   🛡️ **Smart Proxy (Bypass de iFrame/CORS)**: Encaminha requisições dinamicamente através do backend, removendo cabeçalhos restritivos (`x-frame-options`, `content-security-policy`) e injetando a tag `<base>` para garantir que recursos relativos (imagens, scripts, CSS) carreguem corretamente.
-*   ✈️ **Integração com Telegram**:
+*    **Multi-painéis Premium**: Visualização lado a lado de múltiplos painéis em grade responsiva, com suporte a modo tela cheia individual.
+*    **Smart Proxy (Bypass de iFrame/CORS)**: Encaminha requisições dinamicamente através do backend, removendo cabeçalhos restritivos (`x-frame-options`, `content-security-policy`) e injetando a tag `<base>` para garantir que recursos relativos (imagens, scripts, CSS) carreguem corretamente.
+*    **Integração com Telegram**:
     *   Alertas automáticos de **CONEXÃO PERDIDA** (Offline) e **CONEXÃO RESTABELECIDA** (Online).
     *   Configuração e teste de conexão diretamente pela interface do painel.
     *   Recurso de busca automática de **Chat ID** ("Obter ID") buscando mensagens recentes enviadas ao seu bot.
-*   📸 **Agente C# de Transmissão**: Agente Windows leve em C# (sem necessidade de privilégios de administrador) para capturar e redimensionar dinamicamente telas em formato JPEG eficiente.
-*   ⚙️ **Armazenamento Seguro e Local**: Arquivos de dados de painéis e chaves de API salvos localmente e excluídos do rastreamento do Git (`.gitignore`).
+*    **Agente C# de Transmissão**: Agente Windows leve em C# (sem necessidade de privilégios de administrador) para capturar e redimensionar dinamicamente telas em formato JPEG eficiente.
+*    **Armazenamento Seguro e Local**: Arquivos de dados de painéis e chaves de API salvos localmente e excluídos do rastreamento do Git (`.gitignore`).
 
 ---
 
-## 🏗️ Arquitetura do Sistema
+##  Arquitetura do Sistema
 
 ```mermaid
 graph TD
@@ -42,7 +42,7 @@ graph TD
 
 ---
 
-## 📦 Estrutura do Repositório
+## Estrutura do Repositório
 
 ```text
 ├── src/
@@ -64,7 +64,7 @@ graph TD
 
 ---
 
-## 💻 Como Rodar o Dashboard (Servidor Node.js)
+## Como Rodar o Dashboard (Servidor Node.js)
 
 ### Pré-requisitos
 *   [Node.js](https://nodejs.org/) instalado.
@@ -92,7 +92,7 @@ graph TD
 
 ---
 
-## 📷 Como Configurar o Agente de Transmissão de Tela (C#)
+## Como Configurar o Agente de Transmissão de Tela (C#)
 
 O `ScreenAgent.cs` monitora a tela principal do Windows e a envia como JPEG de forma extremamente leve sob demanda.
 
@@ -127,11 +127,11 @@ ScreenAgent.exe 5000
 
 ---
 
-## ✈️ Configuração do Telegram
+## Configuração do Telegram
 
 Para ativar as notificações automatizadas em caso de queda de conexões de painéis:
 
-1. No canto superior direito do dashboard, clique no ícone **✈️ Telegram**.
+1. No canto superior direito do dashboard, clique no ícone ** Telegram**.
 2. Preencha o **Token do Bot** (Gerado pelo [@BotFather](https://t.me/BotFather) no Telegram).
 3. Se você não sabe o ID do seu chat/grupo:
    - Adicione seu Bot ao grupo ou inicie uma conversa com ele.
@@ -141,8 +141,3 @@ Para ativar as notificações automatizadas em caso de queda de conexões de pai
 5. Clique em **Testar Conexão** para validar.
 6. Salve a configuração.
 
----
-
-## 🔒 Segurança de Credenciais
-
-Os arquivos que guardam as chaves de API e a lista de painéis (`src/dashboard/data/`) estão adicionados no arquivo `.gitignore`. Isso garante que suas informações confidenciais de servidores e chaves de bot **nunca sejam comitadas ou expostas publicamente no GitHub**. 
